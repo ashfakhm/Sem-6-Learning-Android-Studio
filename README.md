@@ -34,19 +34,37 @@ These programs represent both practical lab exercises and theoretical coursework
 **Foundation & UI Components**
 
 1. [Toast Notifications](#1-toast-notifications)
-2. [Calculator Application](#2-calculator-application)
-3. [TextView ↔ EditText Operations](#3-textview--edittext-operations)
-4. [Activity Navigation](#4-activity-navigation)
-5. [ImageView Implementation](#5-imageview-implementation)
+2. [Addition of Two Numbers](#2-addition-of-two-numbers)
+3. [Activity Navigation](#3-activity-navigation)
+4. [Copy TextView Content](#4-copy-textview-content)
+5. [Dynamic Background Color](#5-dynamic-background-color)
 
-**List & Selection Components** 6. [Spinner Widget](#6-spinner-widget) 7. [ListView](#7-listview) 8. [Custom Adapters](#8-custom-adapters) 9. [GridView Layout](#9-gridview-layout) 10. [Menu Systems](#10-menu-systems)
+**Visual & Layout Components**
+
+6. [Dynamic Background Image](#6-dynamic-background-image)
+7. [ListView](#7-listview)
+8. [GridView Layout](#8-gridview-layout)
+9. [Spinner Widget](#9-spinner-widget)
+10. [Custom Adapters](#10-custom-adapters)
 
 </td>
 <td width="50%">
 
-**Input & Selection Controls** 11. [CheckBox Controls](#11-checkbox-controls) 12. [RadioButton Groups](#12-radiobutton-groups) 13. [Date & Time Pickers](#13-date--time-pickers) 15. [Picker Dialogs](#15-picker-dialogs)
+**Image & Input Controls**
 
-**Advanced Features** 14. [Alert Dialogs](#14-alert-dialogs) 16. [Chronometer Widget](#16-chronometer-widget) 17. [Dynamic Content Generation](#17-dynamic-content-generation) 18. [Dynamic Background Images](#18-dynamic-background-images) 19. [Dynamic Background Colors](#19-dynamic-background-colors) 20. [Login System](#20-login-system)
+11. [ImageView Implementation](#11-imageview-implementation)
+12. [Date & Time Picker Dialogs](#12-date--time-picker-dialogs)
+13. [Date & Time Pickers](#13-date--time-pickers)
+14. [Chronometer Widget](#14-chronometer-widget)
+15. [CheckBox Controls](#15-checkbox-controls)
+
+**Advanced Features**
+
+16. [RadioButton Groups](#16-radiobutton-groups)
+17. [Alert Dialogs](#17-alert-dialogs)
+18. [Multiplication Table Generator](#18-multiplication-table-generator)
+19. [Login System](#19-login-system)
+20. [Passing Data Between Activities](#20-passing-data-between-activities)
 
 </td>
 </tr>
@@ -62,35 +80,35 @@ These programs represent both practical lab exercises and theoretical coursework
 **Key Concepts:** `Toast` API, message duration, positioning  
 **Use Case:** Displaying transient status messages without disrupting user flow
 
-### 2. Calculator Application
+### 2. Addition of Two Numbers
 
-**Objective:** Build a functional arithmetic calculator  
-**Key Concepts:** Event handling, state management, input validation  
-**Components:** `Button`, `TextView`, mathematical operations, error handling
+**Objective:** Build a simple calculator for adding two numbers  
+**Key Concepts:** Event handling, input validation, arithmetic operations  
+**Components:** `EditText`, `Button`, `TextView`, number parsing, error handling
 
-### 3. TextView ↔ EditText Operations
-
-**Objective:** Programmatic text manipulation between view components  
-**Key Concepts:** View references, text getters/setters, UI synchronization  
-**Pattern:** Bidirectional data binding fundamentals
-
-### 4. Activity Navigation
+### 3. Activity Navigation
 
 **Objective:** Master inter-activity communication  
 **Key Concepts:** `Intent`, activity lifecycle, back stack management  
-**Skills:** Activity transitions, data passing, navigation patterns
+**Skills:** Activity transitions, navigation patterns, starting new activities
 
-### 5. ImageView Implementation
+### 4. Copy TextView Content
 
-**Objective:** Display and manipulate bitmap images  
-**Key Concepts:** `ImageView`, drawable resources, scaling modes  
-**Topics:** Image loading, memory management, aspect ratios
+**Objective:** Programmatic text manipulation between view components  
+**Key Concepts:** View references, text getters/setters, `EditText` to `TextView` copying  
+**Pattern:** Basic UI synchronization and text transfer
 
-### 6. Spinner Widget
+### 5. Dynamic Background Color
 
-**Objective:** Create dropdown selection menus  
-**Key Concepts:** `Spinner`, `ArrayAdapter`, selection listeners  
-**Pattern:** User-driven single-choice selection from predefined options
+**Objective:** Programmatic color scheme modification  
+**Key Concepts:** Color resources, `setBackgroundColor()`, hex/ARGB values  
+**Application:** Runtime theme customization, user-driven color changes
+
+### 6. Dynamic Background Image
+
+**Objective:** Runtime background image manipulation  
+**Key Concepts:** `Drawable` resources, background setters, resource management  
+**Technique:** Programmatic theme customization with images
 
 ### 7. ListView
 
@@ -98,35 +116,35 @@ These programs represent both practical lab exercises and theoretical coursework
 **Key Concepts:** `ListView`, view recycling, list item layouts  
 **Performance:** Efficient rendering of large datasets
 
-### 8. Custom Adapters
+### 8. GridView Layout
+
+**Objective:** Display items in multi-column grid format  
+**Key Concepts:** `GridView`, column configuration, item spacing, adapters  
+**Use Case:** Photo galleries, icon dashboards, tile-based navigation
+
+### 9. Spinner Widget
+
+**Objective:** Create dropdown selection menus  
+**Key Concepts:** `Spinner`, `ArrayAdapter`, selection listeners  
+**Pattern:** User-driven single-choice selection from predefined options
+
+### 10. Custom Adapters
 
 **Objective:** Bridge data sources to `AdapterView` components  
 **Key Concepts:** `BaseAdapter`, view holder pattern, data binding  
 **Architecture:** MVC pattern in Android UI layer
 
-### 9. GridView Layout
+### 11. ImageView Implementation
 
-**Objective:** Display items in multi-column grid format  
-**Key Concepts:** `GridView`, column configuration, item spacing  
-**Use Case:** Photo galleries, icon dashboards, tile-based navigation
+**Objective:** Display and manipulate bitmap images  
+**Key Concepts:** `ImageView`, drawable resources, scaling modes  
+**Topics:** Image loading, memory management, aspect ratios
 
-### 10. Menu Systems
+### 12. Date & Time Picker Dialogs
 
-**Objective:** Implement application menus  
-**Key Concepts:** Options menu, context menu, menu inflation  
-**Resources:** XML menu definitions, menu item handling
-
-### 11. CheckBox Controls
-
-**Objective:** Multi-select input mechanism  
-**Key Concepts:** `CheckBox`, state management, compound buttons  
-**Pattern:** Independent boolean selections
-
-### 12. RadioButton Groups
-
-**Objective:** Mutually exclusive option selection  
-**Key Concepts:** `RadioButton`, `RadioGroup`, single selection enforcement  
-**Pattern:** Form inputs requiring exactly one choice
+**Objective:** Dialog-based date and time selection  
+**Key Concepts:** `DatePickerDialog`, `TimePickerDialog`, callbacks  
+**UX:** Space-efficient modal pickers for date and time input
 
 ### 13. Date & Time Pickers
 
@@ -134,47 +152,47 @@ These programs represent both practical lab exercises and theoretical coursework
 **Key Concepts:** `DatePicker`, `TimePicker`, calendar integration  
 **Components:** Month/day/year selectors, hour/minute controls
 
-### 14. Alert Dialogs
-
-**Objective:** Modal user prompts and confirmations  
-**Key Concepts:** `AlertDialog`, positive/negative/neutral buttons  
-**Use Case:** Critical decisions, confirmations, informational alerts
-
-### 15. Picker Dialogs
-
-**Objective:** Dialog-based date and time selection  
-**Key Concepts:** `DatePickerDialog`, `TimePickerDialog`, callbacks  
-**UX:** Space-efficient alternative to inline pickers
-
-### 16. Chronometer Widget
+### 14. Chronometer Widget
 
 **Objective:** Implement timer and stopwatch functionality  
 **Key Concepts:** `Chronometer`, elapsed time tracking, start/stop controls  
 **Features:** Real-time time display, format customization
 
-### 17. Dynamic Content Generation
+### 15. CheckBox Controls
+
+**Objective:** Multi-select input mechanism  
+**Key Concepts:** `CheckBox`, state management, compound buttons  
+**Pattern:** Independent boolean selections
+
+### 16. RadioButton Groups
+
+**Objective:** Mutually exclusive option selection  
+**Key Concepts:** `RadioButton`, `RadioGroup`, single selection enforcement  
+**Pattern:** Form inputs requiring exactly one choice
+
+### 17. Alert Dialogs
+
+**Objective:** Modal user prompts and confirmations  
+**Key Concepts:** `AlertDialog`, positive/negative/neutral buttons  
+**Use Case:** Critical decisions, confirmations, informational alerts
+
+### 18. Multiplication Table Generator
 
 **Objective:** Programmatically generate multiplication tables  
 **Key Concepts:** Dynamic view creation, loops, string formatting  
 **Pattern:** Algorithm-driven UI generation
 
-### 18. Dynamic Background Images
-
-**Objective:** Runtime background image manipulation  
-**Key Concepts:** `Drawable` resources, background setters, resource management  
-**Technique:** Programmatic theme customization
-
-### 19. Dynamic Background Colors
-
-**Objective:** Programmatic color scheme modification  
-**Key Concepts:** Color resources, `setBackgroundColor()`, hex/ARGB values  
-**Application:** Theme switching, user preferences
-
-### 20. Login System
+### 19. Login System
 
 **Objective:** Complete authentication interface  
-**Key Concepts:** Input validation, credential handling, session management  
-**Security:** Basic authentication patterns, input sanitization
+**Key Concepts:** Input validation, credential handling, basic authentication  
+**Security:** Input validation patterns, credential handling
+
+### 20. Passing Data Between Activities
+
+**Objective:** Transfer data between different activities  
+**Key Concepts:** `Intent` extras, `putExtra()`, `getIntent()`, data serialization  
+**Skills:** Inter-activity communication, data passing patterns
 
 ---
 
