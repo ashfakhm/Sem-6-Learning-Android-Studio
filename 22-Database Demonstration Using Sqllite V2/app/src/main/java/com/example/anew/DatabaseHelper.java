@@ -1,0 +1,51 @@
+package com.example.anew;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class DatabaseHelper extends SQLiteOpenHelper {
+    public static final String DATABASE_NAME = "Books.db";
+    public static final String TABLE_NAME = "books_table";
+    public static final String COL_1 = "ID";
+    public static final String COL_2 = "TITLE";
+    public static final String COL_3 = "AUTHOR";
+    public static final String COL_4 = "PUBLISHER";
+
+    public DatabaseHelper(Context context) {
+        super(context, DATABASE_NAME, null, 1);
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,TITLE TEXT,AUTHOR TEXT,PUBLISHER TEXT)");
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
+        onCreate(db);
+    }
+
+    public boolean insertData(String title, String author, String publisher) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_2, title);
+        contentValues.put(COL_3, author);
+        contentValues.put(COL_4, publisher);
+        long result = db.insert(TABLE_NAME, null, contentValues);
+        return result != -1;
+    }
+
+    public Cursor getAllData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.rawQuery("select " + COL_1 + " as _id, " + COL_2 + ", " + COL_3 + ", " + COL_4 + " from " + TABLE_NAME, null);
+    }
+
+    public Integer deleteAllData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME, null, null);
+    }
+}
