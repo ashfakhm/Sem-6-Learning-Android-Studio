@@ -65,6 +65,7 @@ These programs represent both practical lab exercises and theoretical coursework
 18. [Multiplication Table Generator](#18-multiplication-table-generator)
 19. [Login System](#19-login-system)
 20. [Passing Data Between Activities](#20-passing-data-between-activities)
+21. [Database Android Program](#21-database-android-program)
 
 </td>
 </tr>
@@ -193,6 +194,22 @@ These programs represent both practical lab exercises and theoretical coursework
 **Objective:** Transfer data between different activities  
 **Key Concepts:** `Intent` extras, `putExtra()`, `getIntent()`, data serialization  
 **Skills:** Inter-activity communication, data passing patterns
+
+### 21. Database Android Program
+
+**Objective:** Implement a simple database-driven Android application using SQLite
+**Key Concepts:** `SQLiteOpenHelper`, CRUD operations, persistent storage, database schema
+**Features:**
+
+- Create, Read, Update, Delete (CRUD) operations on a local SQLite database
+- User interface for adding, viewing, updating, and deleting records
+- Example code for database helper and activity integration
+
+**Learning Outcomes:**
+
+- Understand SQLite integration in Android
+- Learn to perform CRUD operations in an Android app
+- Gain experience with Android Studio project structure
 
 ---
 
