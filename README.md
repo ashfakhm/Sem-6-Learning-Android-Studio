@@ -66,6 +66,7 @@ These programs represent both practical lab exercises and theoretical coursework
 19. [Login System](#19-login-system)
 20. [Passing Data Between Activities](#20-passing-data-between-activities)
 21. [Database Android Program](#21-database-android-program)
+22. [Database Demonstration Using SQLite V2](#22-database-demonstration-using-sqlite-v2)
 
 </td>
 </tr>
@@ -192,24 +193,53 @@ These programs represent both practical lab exercises and theoretical coursework
 ### 20. Passing Data Between Activities
 
 **Objective:** Transfer data between different activities  
-**Key Concepts:** `Intent` extras, `putExtra()`, `getIntent()`, data serialization  
+**Key Concepts:** `Inte
+nt` extras, `putExtra()`, `getIntent()`, data serialization  
 **Skills:** Inter-activity communication, data passing patterns
 
 ### 21. Database Android Program
 
 **Objective:** Implement a simple database-driven Android application using SQLite
-**Key Concepts:** `SQLiteOpenHelper`, CRUD operations, persistent storage, database schema
+**Key Concep
+ts:** `SQLiteOpenHelper`, CRUD operations, persistent storage, database schema
 **Features:**
 
 - Create, Read, Update, Delete (CRUD) operations on a local SQLite database
 - User interface for adding, viewing, updating, and deleting records
-- Example code for database helper and activity integration
+- Examp
+  le code for database helper and activity integration
 
 **Learning Outcomes:**
 
 - Understand SQLite integration in Android
 - Learn to perform CRUD operations in an Android app
 - Gain experience with Android Studio project structure
+
+### 22. Database Demonstration Using SQLite V2
+
+**Objective:** Build an enhanced Android app for managing a book collection using SQLite, with a modern UI and efficient data handling.
+
+**Key Concepts:**
+
+- `SQLiteOpenHelper` for database creation and management
+- Custom `CursorAdapter` for efficient ListView population
+- CRUD operations (Create, Read, Delete) on a book database
+- Threading with `ExecutorService` and `Handler` for smooth UI
+- Separation of concerns between UI, data, and adapter
+
+**Features:**
+
+- Add, view, and delete book records (title, author, publisher)
+- All records displayed in a ListView using a custom adapter
+- Asynchronous database operations for responsive UI
+- Clear and reset input fields
+
+**Learning Outcomes:**
+
+- Implement a robust local database solution in Android
+- Use adapters to efficiently display database content
+- Apply threading for non-blocking database operations
+- Design a user-friendly interface for data entry and management
 
 ---
 
