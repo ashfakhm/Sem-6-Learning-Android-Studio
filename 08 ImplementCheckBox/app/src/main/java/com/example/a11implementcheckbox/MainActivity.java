@@ -16,25 +16,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void show(View v) {
-        String msg = "Selected Qualification:";
+        String msg = "Selected: ";
         CheckBox c1 = findViewById(R.id.checkBox);
         CheckBox c2 = findViewById(R.id.checkBox2);
         CheckBox c3 = findViewById(R.id.checkBox3);
         CheckBox c4 = findViewById(R.id.checkBox4);
 
         if (c1.isChecked()) {
-            msg += "\n10";
+            msg += "10 ";
         }
         if (c2.isChecked()) {
-            msg += "\n+2";
+            msg += "+2 ";
         }
         if (c3.isChecked()) {
-            msg += "\nBsc";
+            msg += "Bsc ";
         }
         if (c4.isChecked()) {
-            msg += "\nMsc";
+            msg += "Msc ";
         }
 
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
     }
 }

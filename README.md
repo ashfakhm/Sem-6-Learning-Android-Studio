@@ -9,7 +9,7 @@
 [![Gradle](https://img.shields.io/badge/Build-Gradle-blue.svg?style=flat-square&logo=gradle)](https://gradle.org/)
 [![Android Studio](https://img.shields.io/badge/IDE-Android%20Studio-green.svg?style=flat-square&logo=android-studio)](https://developer.android.com/studio)
 
-_A curated collection of 20 hands-on Android applications exploring core framework components and UI patterns_
+_A curated collection of 10 hands-on Android applications exploring core framework components and UI patterns_
 
 **Lab Partner:** [@MNK-21](https://github.com/MNK-21/)
 
@@ -37,36 +37,18 @@ These programs represent both practical lab exercises and theoretical coursework
 2. [Addition of Two Numbers](#2-addition-of-two-numbers)
 3. [Activity Navigation](#3-activity-navigation)
 4. [Copy TextView Content](#4-copy-textview-content)
-5. [Dynamic Background Color](#5-dynamic-background-color)
-
-**Visual & Layout Components**
-
-6. [Dynamic Background Image](#6-dynamic-background-image)
-7. [ListView](#7-listview)
-8. [GridView Layout](#8-gridview-layout)
-9. [Spinner Widget](#9-spinner-widget)
-10. [Custom Adapters](#10-custom-adapters)
+5. [Static Background Color](#5-static-background-color)
 
 </td>
 <td width="50%">
 
-**Image & Input Controls**
+**Visual & Input Controls**
 
-11. [ImageView Implementation](#11-imageview-implementation)
-12. [Date & Time Picker Dialogs](#12-date--time-picker-dialogs)
-13. [Date & Time Pickers](#13-date--time-pickers)
-14. [Chronometer Widget](#14-chronometer-widget)
-15. [CheckBox Controls](#15-checkbox-controls)
-
-**Advanced Features**
-
-16. [RadioButton Groups](#16-radiobutton-groups)
-17. [Alert Dialogs](#17-alert-dialogs)
-18. [Multiplication Table Generator](#18-multiplication-table-generator)
-19. [Login System](#19-login-system)
-20. [Passing Data Between Activities](#20-passing-data-between-activities)
-21. [Database Android Program](#21-database-android-program)
-22. [Database Demonstration Using SQLite V2](#22-database-demonstration-using-sqlite-v2)
+6. [Static Background Image](#6-static-background-image)
+7. [Date & Time Pickers](#7-date--time-pickers)
+8. [CheckBox Controls](#8-checkbox-controls)
+9. [RadioButton Groups](#9-radiobutton-groups)
+10. [Passing Data Between Activities](#10-passing-data-between-activities)
 
 </td>
 </tr>
@@ -100,146 +82,41 @@ These programs represent both practical lab exercises and theoretical coursework
 **Key Concepts:** View references, text getters/setters, `EditText` to `TextView` copying  
 **Pattern:** Basic UI synchronization and text transfer
 
-### 5. Dynamic Background Color
+### 5. Static Background Color
 
-**Objective:** Programmatic color scheme modification  
-**Key Concepts:** Color resources, `setBackgroundColor()`, hex/ARGB values  
-**Application:** Runtime theme customization, user-driven color changes
+**Objective:** Apply background colors using XML resources  
+**Key Concepts:** `android:background` attribute, color resources (colors.xml)  
+**Application:** Declaring UI styles via layout attributes
 
-### 6. Dynamic Background Image
+### 6. Static Background Image
 
-**Objective:** Runtime background image manipulation  
-**Key Concepts:** `Drawable` resources, background setters, resource management  
-**Technique:** Programmatic theme customization with images
+**Objective:** Apply background images using Drawable resources  
+**Key Concepts:** `android:background` attribute, drawable resources, `ImageView` vs Background  
+**Technique:** declarative UI styling using XML assets
 
-### 7. ListView
-
-**Objective:** Render scrollable vertical lists  
-**Key Concepts:** `ListView`, view recycling, list item layouts  
-**Performance:** Efficient rendering of large datasets
-
-### 8. GridView Layout
-
-**Objective:** Display items in multi-column grid format  
-**Key Concepts:** `GridView`, column configuration, item spacing, adapters  
-**Use Case:** Photo galleries, icon dashboards, tile-based navigation
-
-### 9. Spinner Widget
-
-**Objective:** Create dropdown selection menus  
-**Key Concepts:** `Spinner`, `ArrayAdapter`, selection listeners  
-**Pattern:** User-driven single-choice selection from predefined options
-
-### 10. Custom Adapters
-
-**Objective:** Bridge data sources to `AdapterView` components  
-**Key Concepts:** `BaseAdapter`, view holder pattern, data binding  
-**Architecture:** MVC pattern in Android UI layer
-
-### 11. ImageView Implementation
-
-**Objective:** Display and manipulate bitmap images  
-**Key Concepts:** `ImageView`, drawable resources, scaling modes  
-**Topics:** Image loading, memory management, aspect ratios
-
-### 12. Date & Time Picker Dialogs
-
-**Objective:** Dialog-based date and time selection  
-**Key Concepts:** `DatePickerDialog`, `TimePickerDialog`, callbacks  
-**UX:** Space-efficient modal pickers for date and time input
-
-### 13. Date & Time Pickers
+### 7. Date & Time Pickers
 
 **Objective:** Inline date and time selection widgets  
-**Key Concepts:** `DatePicker`, `TimePicker`, calendar integration  
-**Components:** Month/day/year selectors, hour/minute controls
+**Key Concepts:** `DatePicker`, `TimePicker`, `OnDateChangedListener`, `OnTimeChangedListener`  
+**Components:** Month/day/year selectors, hour/minute controls, event handling
 
-### 14. Chronometer Widget
+### 8. CheckBox Controls
 
-**Objective:** Implement timer and stopwatch functionality  
-**Key Concepts:** `Chronometer`, elapsed time tracking, start/stop controls  
-**Features:** Real-time time display, format customization
+**Objective:** Multi-select input mechanism (Qualification Selector)  
+**Key Concepts:** `CheckBox`, state management, conditional logic  
+**Pattern:** Independent boolean selections, aggregating multiple user choices
 
-### 15. CheckBox Controls
+### 9. RadioButton Groups
 
-**Objective:** Multi-select input mechanism  
-**Key Concepts:** `CheckBox`, state management, compound buttons  
-**Pattern:** Independent boolean selections
-
-### 16. RadioButton Groups
-
-**Objective:** Mutually exclusive option selection  
-**Key Concepts:** `RadioButton`, `RadioGroup`, single selection enforcement  
+**Objective:** Mutually exclusive option selection (Gender Selector)  
+**Key Concepts:** `RadioButton`, `RadioGroup`, `OnCheckedChangeListener`  
 **Pattern:** Form inputs requiring exactly one choice
 
-### 17. Alert Dialogs
-
-**Objective:** Modal user prompts and confirmations  
-**Key Concepts:** `AlertDialog`, positive/negative/neutral buttons  
-**Use Case:** Critical decisions, confirmations, informational alerts
-
-### 18. Multiplication Table Generator
-
-**Objective:** Programmatically generate multiplication tables  
-**Key Concepts:** Dynamic view creation, loops, string formatting  
-**Pattern:** Algorithm-driven UI generation
-
-### 19. Login System
-
-**Objective:** Complete authentication interface  
-**Key Concepts:** Input validation, credential handling, basic authentication  
-**Security:** Input validation patterns, credential handling
-
-### 20. Passing Data Between Activities
+### 10. Passing Data Between Activities
 
 **Objective:** Transfer data between different activities  
-**Key Concepts:** `Inte
-nt` extras, `putExtra()`, `getIntent()`, data serialization  
-**Skills:** Inter-activity communication, data passing patterns
-
-### 21. Database Android Program
-
-**Objective:** Implement a simple database-driven Android application using SQLite
-**Key Concep
-ts:** `SQLiteOpenHelper`, CRUD operations, persistent storage, database schema
-**Features:**
-
-- Create, Read, Update, Delete (CRUD) operations on a local SQLite database
-- User interface for adding, viewing, updating, and deleting records
-- Examp
-  le code for database helper and activity integration
-
-**Learning Outcomes:**
-
-- Understand SQLite integration in Android
-- Learn to perform CRUD operations in an Android app
-- Gain experience with Android Studio project structure
-
-### 22. Database Demonstration Using SQLite V2
-
-**Objective:** Build an enhanced Android app for managing a book collection using SQLite, with a modern UI and efficient data handling.
-
-**Key Concepts:**
-
-- `SQLiteOpenHelper` for database creation and management
-- Custom `CursorAdapter` for efficient ListView population
-- CRUD operations (Create, Read, Delete) on a book database
-- Threading with `ExecutorService` and `Handler` for smooth UI
-- Separation of concerns between UI, data, and adapter
-
-**Features:**
-
-- Add, view, and delete book records (title, author, publisher)
-- All records displayed in a ListView using a custom adapter
-- Asynchronous database operations for responsive UI
-- Clear and reset input fields
-
-**Learning Outcomes:**
-
-- Implement a robust local database solution in Android
-- Use adapters to efficiently display database content
-- Apply threading for non-blocking database operations
-- Design a user-friendly interface for data entry and management
+**Key Concepts:** `Intent` extras, `putExtra()`, `getIntent()`, data serialization  
+**Skills:** Inter-activity communication, passing user input (e.g., name) to a second screen
 
 ---
 
@@ -303,7 +180,7 @@ git clone <repository-url>
 cd Sem-6-Android_Studio_Programs
 
 # Open individual project in Android Studio
-# File → Open → Select project directory (e.g., "1-Implement Toast")
+# File → Open → Select project directory (e.g., "01-Implement Toast")
 
 # Sync Gradle
 # Android Studio will automatically trigger Gradle sync
